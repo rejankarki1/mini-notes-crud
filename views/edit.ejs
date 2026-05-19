@@ -1,0 +1,13 @@
+<h1>Edit Note</h1>
+
+<form action="/notes/<%= note.id %>?_method=PATCH" method="POST">
+
+    <input type="text" name="title" value="<%= note.title %>">
+
+    <textarea name="description"><%= note.description %></textarea>
+
+    <button type="submit">Update</button>
+
+</form>
+
+<a href="/notes/<%= note.id %>">Cancel</a>
