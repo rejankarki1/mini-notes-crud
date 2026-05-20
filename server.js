@@ -5,7 +5,7 @@ import methodOverride from "method-override";
 import { v4 as uuidv4 } from "uuid";
 
 const app = express();
-const port = 8080;
+const PORT = process.env.PORT || 3000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -90,6 +90,6 @@ app.delete("/notes/:id", (req, res) => {
     res.redirect("/notes");
 });
 
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
